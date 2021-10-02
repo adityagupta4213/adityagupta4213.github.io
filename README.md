@@ -8,4 +8,4 @@
 - 🔗 Links: [LinkedIn](https://www.linkedin.com/in/aditya-jayant-gupta/), [Hackerrank](https://www.hackerrank.com/daemonad), [ArtStation](https://www.artstation.com/adityajayantgupta4213)
 - 🌱 Learning all about **Open Source**
 - 💬 Ping me about **design**, **ui**, **javascript**, **development**, **3d rendering**, **prototyping**
-- 📫 Reach me: [gmail](mailto:adityagupta4213@gmail.com)
+- 📫 Reach me: [adityagupta4213@gmail.com](mailto:adityagupta4213@gmail.com)
