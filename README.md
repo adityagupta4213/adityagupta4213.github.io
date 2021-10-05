@@ -6,6 +6,7 @@
 
 ### HackerRank Certificates
 [![image](https://res.cloudinary.com/daemonad/image/upload/v1633280574/problem_solving_basic_skill_vpnekm.png)](https://www.hackerrank.com/certificates/8697a5adafb4) [![image](https://res.cloudinary.com/daemonad/image/upload/v1633280574/python_basic_skill_fkeufg.png)](https://www.hackerrank.com/certificates/58709da73c52)
+[![image](https://res.cloudinary.com/daemonad/image/upload/v1633446698/javascript_basic_skill_tsuvwj.png)](https://www.hackerrank.com/certificates/61dc4a6571cd)
 
 - 🏢 I'm currently pursuing **Bachelor of Technology - Computer Science and Engineering**
 - ⚙️ I use daily: `.js`, `.html`, `.css`, `.svg`, `.psd`, `.ai`, `.blend`
