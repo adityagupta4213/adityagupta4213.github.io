@@ -2,7 +2,9 @@
 #### I'm a Frontend Web Developer and Software Engineering student working in Lucknow, India.
 
 ### HackerRank Badges
-[![image](https://res.cloudinary.com/daemonad/image/upload/v1633277631/problem-solving_level_3_stars_5_linkedin-87839cf294_e1mzny.png)](https://www.hackerrank.com/daemonad) [![image](https://raw.githubusercontent.com/nathan-abela/HackerRank-Solutions/master/Badges/10_days_of_javascript_5_star.png)](https://www.hackerrank.com/daemonad)
+[![image](https://res.cloudinary.com/daemonad/image/upload/v1633277631/problem-solving_level_3_stars_5_linkedin-87839cf294_e1mzny.png)](https://www.hackerrank.com/daemonad) 
+[![image](https://raw.githubusercontent.com/nathan-abela/HackerRank-Solutions/master/Badges/10_days_of_javascript_5_star.png)](https://www.hackerrank.com/daemonad)
+[![image](https://res.cloudinary.com/daemonad/image/upload/v1633450747/EPY0YNgX4AEAprb_f8ovpj.png)](https://www.hackerrank.com/daemonad)
 
 ### HackerRank Certificates
 [![image](https://res.cloudinary.com/daemonad/image/upload/v1633280574/problem_solving_basic_skill_vpnekm.png)](https://www.hackerrank.com/certificates/8697a5adafb4) [![image](https://res.cloudinary.com/daemonad/image/upload/v1633280574/python_basic_skill_fkeufg.png)](https://www.hackerrank.com/certificates/58709da73c52)
