@@ -1,0 +1,40 @@
+@import '../../about/style/style';
+.content {
+    padding: 3rem;
+    .contact-form {
+        label {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            color: $black;
+        }
+        input,
+        textarea {
+            font-family: 'Open Sans', sans-serif;
+            color: $black;
+            box-shadow: none;
+            border-radius: 3px;
+        }
+        input::placeholder,
+        textarea::placeholder {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.9rem;
+            color: $dk-gray;
+        }
+    }
+    textarea {
+        resize: none;
+        height: 20vh;
+    }
+}
+
+@media screen and (max-height: 1280px) {
+    .content {
+        .contact-form {
+            textarea {
+                height: 15vh;
+            }
+        }
+    }
+}

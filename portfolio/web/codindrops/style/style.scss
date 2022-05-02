@@ -1,0 +1,145 @@
+$gray: #F0F0F0;
+$dk-gray: #969696;
+$black: #333333;
+body {
+    min-width: 360px;
+    max-width: 1920px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $black;
+}
+
+.header {
+    padding: 5rem;
+    text-align: center;
+    background-color: $gray;
+    color: $dk-gray;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    h2 {
+        font-weight: bold;
+        color: $black;
+    }
+    a {
+        margin: 0.8rem;
+        color: $dk-gray;
+        font-size: 1.3rem;
+        transition: 0.3s ease;
+    }
+    a:hover {
+        color: $black;
+    }
+    .header-link{
+        font-size: 0.9rem;
+    }
+}
+
+.content {
+    margin: 2rem 20%;
+    padding: 1rem;
+    .section-header {
+        margin: 3rem;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+    }
+    .post {
+        padding: 2rem 0;
+        border-bottom: 1px solid $dk-gray;
+        .post-header {
+            font-weight: bold;
+        }
+        p {
+            color: $black;
+            font-family: "Merriweather", serif;
+            font-weight: 300;
+        }
+        .post-detail {
+            font-family: "Open Sans", sans-serif;
+            font-size: 0.9rem;
+            color: $dk-gray;
+        }
+    }
+}
+.link{
+    font-family: 'Open Sans', sans-serif;
+    color: $dk-gray;
+    transition: 0.3s;
+}
+.link:hover{
+    color: $black;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: $black;
+    border-radius: 5rem;
+    border: 1px solid #ccc;
+    font-family: "Open Sans", sans-serif;
+    transition: 0.3s ease;
+}
+
+.button:hover, .button:focus, .button:active {
+    border-color: $black;
+    background: transparent;
+    color: $black;
+}
+
+.more-posts{
+    padding: 1rem 1.5rem;
+    margin: 3rem;
+    border-radius: 2px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 100;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: $gray;
+    a {
+        margin: auto 0.8rem;
+        color: $dk-gray;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 0.8rem;
+        transition: 0.3s ease;
+    }
+    a:hover {
+        color: $black;
+    }
+    .goto-top {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .footer {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .header {
+        font-size: 1.1rem;
+        h2 {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header {
+        text-align: left;
+    }
+    .goto-top {
+        display: none;
+    }
+}

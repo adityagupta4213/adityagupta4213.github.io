@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CodinDrops - All Posts</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="../../style/foundation.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body location="CONTACT">
+    <header class="header" id="top">
+        <a href="../../index.html">
+            <h2>CodinDrops</h2>
+        </a>
+        <p>Want to learn more about C++/HTML/CSS/Java?
+            <br /> You have come to the right place.
+        </p>
+        <!-- Social Links -->
+        <div class="row">
+            <a href="" class="social-link"><i class="fa fa-facebook-official"></i></a>
+            <a href="" class="social-link"><i class="fa fa-twitter"></i></a>
+            <a href="" class="social-link"><i class="fa fa-dribbble"></i></a>
+            <a href="" class="social-link"><i class="fa fa-instagram"></i></a>
+            <a href="" class="social-link"><i class="fa fa-github"></i></a>
+            <a href="" class="social-link"><i class="fa fa-behance"></i></a>
+            <a href="" class="social-link"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <!-- End -->
+    </header>
+    <section class="content">
+        <div class="row">
+            <div class="large-9 columns">
+                <div class="row">
+                    <h2>Get in touch</h2>
+                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis
+                        euismod. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare
+                        sem lacinia quam venenatis vestibulum.
+                    </p>
+                </div>
+                <div class="row">
+                    <form class="contact-form">
+                        <label>NAME</label>
+                        <input type="text" name="Name" placeholder="Enter your name" />
+                        <label>EMAIL ADDRESS</label>
+                        <input type="email" name="Email" placeholder="Enter your email address" />
+                        <label>MESSAGE</label>
+                        <textarea placeholder="Enter your message"></textarea>
+                        <input type="submit" class="button" value="Submit" />
+                    </form>
+                </div>
+            </div>
+            <div class="large-3 columns">
+                <div class="row">
+                    <div class="bio">
+                        <img src="res/profile-picture.png" alt="profile-picture" />
+                        <h6>Johhny Johnson</h6>
+                        <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images,
+                            and video all in one place.
+                        </p>
+                        <h6>Something else here</h6>
+                        <p>Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                            auctor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="row">
+            <a href="../../index.html" class="footer-link">HOME</a>
+            <a href="../all-posts/index.html" class="footer-link">ALL POSTS</a>
+            <a href="../contact/index.html" class="footer-link">ABOUT</a>
+            <a href="javascript:void(0)" class="footer-link">CONTACT</a>
+            <a href="#top" class="goto-top">&uarr; &nbsp;GO TO TOP</a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/933f3f7a65.js"></script>
+    <script type="text/javascript" src="../../js/base.js"></script>
+    <script>
+        var link = $('.footer-link');
+        link.each(function () {
+            if ($("body").attr('location') == $(this).html()) {
+                $(this).css("color", "#333333");
+            }
+        });
+    </script>
+</body>
+
+</html>

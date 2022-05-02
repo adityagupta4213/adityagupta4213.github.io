@@ -12,14 +12,29 @@
 
     <!-- Local -->
     <link rel="stylesheet" href="icofont/icofont.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <canvas id="nokey" width="800" height="800">
+    </canvas>    
     <!-- Navigation Menu -->
-    <nav>
+    <nav id="nav-desktop">
         <div class="left"><b>Aditya</b> Gupta</div>
         <div class="right">
             <ul>
+                <li><a data-scroll href="#about" class="link" rel="noopener noreferrer">About Me</a></li>
+                <li><a href="https://s3.amazonaws.com/attachments.angel.co/6904652-b61d70bd1d380c8ebb26ecffc4d020a4.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJS6W3HGZGRJIRBTA%2F20220430%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220430T111818Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=56b04efe12eef6563973112cf9e0fe4dc7f283e7f527bd199bf4c461af88bd83" class="link" target="blank" rel="noopener noreferrer">Resume</a></li>
+                <li><a data-scroll href="#portfolio" class="link" rel="noopener noreferrer">Portfolio</a></li>
+                <li><a data-scroll href="#contact" class="link" rel="noopener noreferrer">Contact</a></li>
+            </ul>
+        </div>
+    </nav>  
+    <nav id="nav-mobile">
+        <div class="left"><b>Aditya</b> Gupta</div>
+        <div class="right">
+            <i id="nav-btn" class="icofont-navigation-menu"></i>
+            <ul id="nav-mobile-menu">
                 <li><a data-scroll href="#about" class="link" rel="noopener noreferrer">About Me</a></li>
                 <li><a href="https://s3.amazonaws.com/attachments.angel.co/6904652-b61d70bd1d380c8ebb26ecffc4d020a4.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJS6W3HGZGRJIRBTA%2F20220430%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220430T111818Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=56b04efe12eef6563973112cf9e0fe4dc7f283e7f527bd199bf4c461af88bd83" class="link" target="blank" rel="noopener noreferrer">Resume</a></li>
                 <li><a data-scroll href="#portfolio" class="link" rel="noopener noreferrer">Portfolio</a></li>
@@ -35,7 +50,7 @@
         <div class="right">
             <h2 class="sub-heading">Frontend Developer</h2>
             <h1 class="heading">Aditya Gupta</h1>
-            <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto in possimus corporis iure neque quas, dolorum officia quam non aut. Laudantium itaque, veniam ipsum eius hic sapiente dolorem odio culpa!</p>
+            <p class="bio">I'm a Frontend Developer experienced in bringing your ideas to life, turning prototypes into working web solutions.</p>
             <input type="button" value="Download CV" class="cta" onclick="window.open('https://s3.amazonaws.com/attachments.angel.co/6904652-b61d70bd1d380c8ebb26ecffc4d020a4.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJS6W3HGZGRJIRBTA%2F20220430%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220430T111818Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=56b04efe12eef6563973112cf9e0fe4dc7f283e7f527bd199bf4c461af88bd83', '_blank')">
             <input type="button" value="Contact" id="contact-btn">
         </div>
@@ -114,11 +129,21 @@
                 <button type="button" data-filter=".three-d">3D Modelling</button>            
                 <button type="button" data-filter=".graphic">Graphic Design</button>
             </div>
-            <div class="container" id="gallery">
-                <a href="/portfolio/web/item-1.html" class="mix web-dev"><div class="portfolio-item" style="background-image: url('portfolio/web/thumb-1.png');"></div></a>
-                <a href="/portfolio/ui/item-1.html" class="mix ui"><div class="portfolio-item" style="background-image: url('portfolio/ui/thumb-1.png');"></div></a>
-                <a href="/portfolio/3d/item-1.html" class="mix three-d"><div class="portfolio-item" style="background-image: url('portfolio/3d/thumb-1.png');"></div></a>
-                <a href="/portfolio/graphic/item-1.html" class="mix graphic"><div class="portfolio-item" style="background-image: url('portfolio/graphic/thumb-1.png');"></div></a>
+            <div id="gallery">
+                
+                <a target="blank" href="/portfolio/web/codindrops/index.html" class="mix web-dev"><div class="portfolio-item" style="background-image: url('portfolio/web/thumb-1.png');"></div></a>               
+                <a target="blank" href="/portfolio/web/dashboard/index.html" class="mix web-dev"><div class="portfolio-item" style="background-image: url('portfolio/web/thumb-2.png');"></div></a>                
+                <a target="blank" href="/portfolio/web/app_mockup/index.html" class="mix web-dev"><div class="portfolio-item" style="background-image: url('portfolio/web/thumb-3.png');"></div></a>
+                <a target="blank" href="https://dribbble.com/shots/6492830-Notepad-Material-UI" class="mix ui"><div class="portfolio-item" style="background-image: url('portfolio/ui/thumb-1.png');"></div></a>
+                <a target="blank" href="https://dribbble.com/shots/6492845-UDP-Client-Metro-UI" class="mix ui"><div class="portfolio-item" style="background-image: url('portfolio/ui/thumb-2.png');"></div></a>
+                <a target="blank" href="https://dribbble.com/shots/6492804-devRant-Unofficial-Acrylic-UI" class="mix ui"><div class="portfolio-item" style="background-image: url('portfolio/ui/thumb-3.png');"></div></a>
+                <a target="blank" href="https://dribbble.com/shots/18153361-Emergency-Services-App-UI" class="mix ui"><div class="portfolio-item" style="background-image: url('portfolio/ui/thumb-4.png');"></div></a>
+                <a target="blank" href="https://www.artstation.com/artwork/mzgWNa" class="mix three-d"><div class="portfolio-item" style="background-image: url('portfolio/3d/thumb-1.png');"></div></a>
+                <a target="blank" href="https://www.artstation.com/artwork/L3LP3P" class="mix three-d"><div class="portfolio-item" style="background-image: url('portfolio/3d/thumb-2.png');"></div></a>                
+                <a target="blank" href="https://www.artstation.com/artwork/o2XA4w" class="mix three-d"><div class="portfolio-item" style="background-image: url('portfolio/3d/thumb-3.png');"></div></a>
+                <a target="blank" href="/portfolio/graphic/thumb-1.png" class="mix graphic"><div class="portfolio-item" style="background-image: url('portfolio/graphic/thumb-1.png');"></div></a>
+                <a target="blank" href="/portfolio/graphic/thumb-2.png" class="mix graphic"><div class="portfolio-item" style="background-image: url('portfolio/graphic/thumb-2.png');"></div></a>
+                <a target="blank" href="/portfolio/graphic/dynamite_promo.mp4" class="mix graphic"><div class="portfolio-item" style="background-image: url('portfolio/graphic/thumb-3.png');"></div></a>
             </div>
         </div>
         
@@ -152,7 +177,7 @@
                     </div>
                     <div class="right">
                         <h3 class="title">adityagupta4213@gmail.com</h3>
-                        <p class="contact-detail">For any detailed enquiries, you can either use the contact form or email me.</p>
+                        <p class="contact-detail">For any detailed enquiries, you can either contact me on the email above or use the contact form below.</p>
                     </div>
                 </div>
             </div>
@@ -175,19 +200,29 @@
     <footer>
         <ul id="socials">
             <li>
-                <a href="https://www.linkedin.com/in/aditya-jayant-gupta/" target="blank" class="link">linkedin</a>
+                <a href="https://www.linkedin.com/in/aditya-jayant-gupta/" target="blank" class="link">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
             </li>            
             <li>
-                <a href="https://github.com/adityagupta4213" target="blank" class="link">github</a>
+                <a href="https://github.com/adityagupta4213" target="blank" class="link">
+                    <i class="fa-brands fa-github-square"></i>
+                </a>
             </li>            
             <li>
-                <a href="https://www.hackerrank.com/daemonad" target="blank" class="link">hackerrank</a>
+                <a href="https://www.hackerrank.com/daemonad" target="blank" class="link">
+                    <i class="fa-brands fa-hackerrank"></i>
+                </a>
             </li>
             <li>
-                <a href="https://dribbble.com/daemonAD" target="blank" class="link">dribbble</a>
+                <a href="https://dribbble.com/daemonAD" target="blank" class="link">
+                    <i class="fa-brands fa-dribbble-square"></i>
+                </a>
             </li>
             <li>
-                <a href="https://www.artstation.com/adityajayantgupta4213" class="link">artstation</a>
+                <a href="https://www.artstation.com/adityajayantgupta4213" class="link">
+                    <i class="fa-brands fa-artstation"></i>
+                </a>
             </li>
         </ul>
     </footer>

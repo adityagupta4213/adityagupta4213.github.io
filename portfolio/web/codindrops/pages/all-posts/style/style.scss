@@ -1,0 +1,12 @@
+@import '../../../style/style';
+.content {
+    .row:nth-child(1) {
+        border-top: 1px solid $dk-gray;
+    }
+    h3{
+        transition: 0.3s;
+    }
+    h3:hover{
+        color: $dk-gray;
+    }
+}

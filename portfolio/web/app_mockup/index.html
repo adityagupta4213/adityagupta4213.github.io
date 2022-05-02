@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style/foundation.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle|Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="style/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="style/alertify.core.css" />
+    <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body>
+    <div class="phone">
+        <div class="screen  mCustomScrollbar" data-mcs-theme="minimal-dark">
+            <div class="header">
+                <div class="row">
+                    <div class="large-2 columns">
+                        <a href="javascript:void(0)" class="back btn">&lt;</a>
+                    </div>
+                    <div class="large-8 columns">
+                        <h2 class="section-title">
+                       Job Details</h2>
+                    </div>
+                    <div class="large-2 columns menu-btn btn">
+                        <a class="menu-circle">&#9679;</a>
+                        <a class="menu-circle">&#9679;</a>
+                        <a class="menu-circle">&#9679;</a>
+                    </div>
+                    <div class="menu">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Quit</a></li>                        
+                    </div>
+
+                </div>
+            </div>
+            <div class="content">
+                <div class="row">
+                    <span class="price-tag">Fixed &#9679; $250.00</span>
+                    <i class="job-status">Job Open</i>
+                </div>
+                <div class="row">
+                    <h1 class="job-title">Photograph Several Selected Locations <span class="location"><i class="fa fa-map-marker"></i>&nbsp;New York</span></h1>
+                </div>
+                <div class="row" id="tags">
+                   <span id="tags-container">
+                    <a href="javascript:void(0)" class="tag btn">Fixed <span class="remove">X</span></a>
+                    <a href="javascript:void(0)" class="tag btn">Contract <span class="remove">X</span></a>
+                    <a href="javascript:void(0)" class="tag btn">Expert <span class="remove">X</span></a>
+                    </span>
+                    <a href="javascript:void(0)" class="add btn">+</a>
+                </div>
+                <div class="job-brief">
+                    <div class="row">
+
+                        <div class="large-4 columns">
+                            <i class="fa fa-clock-o">
+                        </i>
+                            <h2>Urgent</h2>
+                            <p>Job</p>
+                        </div>
+                        <div class="large-4 columns">
+                            <i class="fa fa-briefcase">
+                        </i>
+                            <h2>One Time</h2>
+                            <p>Type</p>
+                        </div>
+                        <div class="large-4 columns">
+                            <i class="fa fa-signal">
+                        </i>
+                            <h2>Senior</h2>
+                            <p>Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="tab">
+                    <div class="large-6 columns btn">
+                        <h3>Details</h3>
+                    </div>
+                    <div class="large-6 columns btn">
+                        <h3 class="active">Applicants(<span id="applicants">3</span>)</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-details-wrapper">
+                <div class="row">
+                    <div class="large-4 columns">
+                        <img src="res/pro-pic-1.jpg" alt="Adelle Charles" class="profile-picture" />
+                    </div>
+                    <div class="large-4 columns">
+                        <h1 class="name">Adelle Charles</h1>
+                        <p class="profession">Drone Photographer</p>
+                    </div>
+                    <div class="large-4 columns">
+                        <span class="circle btn reject"><i class="fa fa-times" ></i></span>
+                        <span class="circle btn blue accept"><i class="fa fa-check"></i></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-4 columns">
+                        <img src="res/pro-pic-2.jpg" alt="Arsh Milani" class="profile-picture" />
+                    </div>
+                    <div class="large-4 columns">
+                        <h1 class="name">Arsh Milani</h1>
+                        <p class="profession">Videographer &amp; Photographer</p>
+                    </div>
+                    <div class="large-4 columns">
+                        <span class="circle btn reject"><i class="fa fa-times" ></i></span>
+                        <span class="circle btn blue accept"><i class="fa fa-check"></i></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-4 columns">
+                        <img src="res/pro-pic-3.jpg" alt="Dan Counsell" class="profile-picture" />
+                    </div>
+                    <div class="large-4 columns">
+                        <h1 class="name">Dan Counsell</h1>
+                        <p class="profession">Photographer &amp; Model</p>
+                    </div>
+                    <div class="large-4 columns">
+                        <span class="circle btn reject"><i class="fa fa-times" ></i></span>
+                        <span class="circle btn blue accept"><i class="fa fa-check"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/alertify.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function ($) {
+            $(window).on("load", function () {
+                $(".screen").mCustomScrollbar();
+            });
+        })(jQuery);
+    </script>
+
+
+</body>
+
+</html>
