@@ -11,46 +11,90 @@
     font-family: 'Poppins', 'Helvetica', sans-serif;
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
     color: var(--primary-text);
 }
 
-body {
-    width: 60%;
-    margin: 5rem auto;
+canvas {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: white;
 }
 
-.container{
+body {
+    margin: 1rem 2rem;
+}
+
+.container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
 }
 
 .left {
     flex: auto;
-    margin-right: 2rem;
+    margin-right: 1rem;
+    text-align: left;
 }
 
 .right {
     flex: auto;
 }
 
-/* Navigation Bar */
+/* mobile navigation bar */
 
-nav {
-    -moz-column-count: 2;
-    -moz-column-gap: 1%;
-    -webkit-column-count: 2;
-    -webkit-column-gap: 1%;
-    column-count: 2;
-    column-gap: 1%;
+nav#nav-mobile {
+    display: flex;
 }
 
-nav .right {
+nav#nav-mobile .left {
+    flex: 1;
+}
+
+nav#nav-mobile .right {
+    flex: 1;
     text-align: right;
 }
 
-nav li {
+nav#nav-mobile ul {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    background: white;
+    transition: 300ms;
+}
+
+nav#nav-mobile ul li {
+    margin: 1rem auto;
+}
+
+nav#nav-mobile ul li a.link {
+    margin: 0;
+}
+
+/* desktop-navigation Bar */
+
+nav#nav-desktop {
+    display: none;
+    align-items: baseline;
+}
+
+nav#nav-desktop .right {
+    text-align: right;
+}
+
+nav#nav-desktop li {
     display: inline-block;
 }
 
@@ -71,58 +115,66 @@ a.link:hover {
 div#hero {
     margin-top: 5rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-div#hero .left, div#hero .right {
+div#hero .left,
+div#hero .right {
     flex: 1;
     margin: auto 2rem;
 }
 
 div#hero .left {
-    text-align: right;
+    text-align: center;
 }
 
 div#hero .right {
-    text-align: left;
+    text-align: center;
 }
 
 img#profile-pic {
-    height: 20rem;
-    border: 20px solid white;
+    height: 10rem;
+    border: 15px solid white;
     border-radius: 100%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 h2.sub-heading {
     color: var(--secondary);
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 300;
+    text-align: center;
 }
 
 h1.heading {
-    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
     line-height: 10px;
+    text-align: center;
 }
 
 p.bio {
     color: var(--primary-light);
     font-size: 0.9rem;
+    text-align: left;
 }
 
 /* Button Styling */
 
-input[type="button"], button {
+input[type="button"],
+button {
     background: none;
-	color: inherit;
-	border: 2px solid var(--secondary);
+    color: inherit;
+    border: 2px solid var(--secondary);
     border-radius: 5rem;
     margin-right: 1rem;
-	padding: 0.5rem 1.5rem;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+    padding: 0.5rem 1.5rem;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
     transition: 300ms;
+    margin-top: 1rem;
 }
 
 input[type="button"]:hover {
@@ -138,6 +190,10 @@ input[type="button"].cta:hover {
     color: white;
 }
 
+div#hero input[type="button"] {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 /* About Me */
 
 h2.section-heading {
@@ -148,6 +204,7 @@ h2.section-heading {
     padding-bottom: 7px;
     font-size: 1.2rem;
 }
+
 h2.section-heading:before {
     display: block;
     position: absolute;
@@ -156,7 +213,7 @@ h2.section-heading:before {
     background-color: #f5f5f5;
     height: 2px;
     bottom: 0;
- }
+}
 
 h2.section-heading:after {
     display: block;
@@ -166,27 +223,38 @@ h2.section-heading:after {
     background-color: var(--accent);
     height: 2px;
     bottom: 0;
- }
+}
 
 /* Skills section */
 
- div.skills {
+div.skills {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
 
+div.skill {
+    margin-top: 1rem;
+}
+
 i.icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--accent);
 }
 
 h3.title {
     margin-top: 0;
+    margin-bottom: 0;
     font-weight: 600;
     font-size: 1rem;
+    word-break: break-word;
+}
+
+p.skill-description {
+    margin-top: 0;
+    font-size: 0.8rem;
 }
 
 /* Portfolio Gallery */
@@ -196,10 +264,13 @@ div.gallery-container {
 }
 
 div.gallery-container .controls button {
-    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+    font-size: 0.8rem;
 }
 
-div.gallery-container .portfolio-control-active, div.gallery-container .controls button:hover {
+div.gallery-container .portfolio-control-active,
+div.gallery-container .controls button:hover {
     border-color: var(--accent);
     background: var(--accent);
     color: white;
@@ -207,16 +278,17 @@ div.gallery-container .portfolio-control-active, div.gallery-container .controls
 
 div.portfolio-item {
     height: 15rem;
-    width: 15rem;
+    margin: auto;
     background-size: cover;
+    background-position: center;
 }
 
 /* Container
 ---------------------------------------------------------------------- */
 
 div#portfolio .container {
+    display: block;
     padding: 1rem;
-    text-align: justify;
     font-size: 0.1px;
 }
 
@@ -224,6 +296,10 @@ div#portfolio .container:after {
     content: '';
     display: inline-block;
     width: 100%;
+}
+
+div#gallery {
+    margin-top: 2rem;
 }
 
 /* Target Elements
@@ -238,20 +314,22 @@ div#portfolio .container:after {
 .mix {
     background: #fff;
     border-radius: 2px;
-    margin-bottom: 1rem;
     position: relative;
-}
-
-.mix:before {
-    content: '';
-    display: inline-block;
-    padding-top: 1rem;
 }
 
 /* Contact */
 
-div#contact .container .contacts {
-    width: 40%;
+div#contact>.container {
+    flex-direction: column;
+}
+
+div#contact p,
+div#contact h3 {
+    font-size: 0.9rem;
+}
+
+div#contact form .container {
+    flex-direction: column;
 }
 
 div#contact form .container .left {
@@ -266,29 +344,45 @@ div#contact .contacts .contact {
     margin-bottom: 1rem;
 }
 
-div#contact .title {
-    line-height: 0.5rem;
+div#contact .contact-detail {
+    margin-top: 0;
+    font-size: 0.9rem;
 }
 
 /* form */
 
-div#contact form * {
-    width: 100%;    
-    padding: 1rem;
-    padding-top: 0;
+div#contact form {
+    align-items: center;
+    text-align: center;
 }
 
-div#contact form input, div#contact form textarea {
+div#contact form * {
+    padding: 0;
+    margin: auto;
+}
+
+div#contact form .left,
+div#contact form .right {
+    width: 100%;
+}
+
+div#contact form input,
+div#contact form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
     padding: 0.5rem 1rem;
     margin-bottom: 1.5rem;
     border: 2px solid var(--secondary);
     border-radius: 0.25rem;
 }
 
+div#contact form textarea {
+    resize: vertical;
+}
+
 div#contact form button {
     padding: 0.5rem;
-    margin-left: 2rem;
-    width: 30%;
     vertical-align: middle;
 }
 
@@ -298,25 +392,31 @@ div#contact form button:hover {
     color: white;
 }
 
-div#contact form textarea {
-    resize: vertical;
-}
-
 /* Footer */
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     margin-top: 3rem;
 }
+
 footer ul {
-    flex: 1;
+    padding: 0;
+    text-align: center;
 }
 
-footer ul * {
+footer ul li {
     display: inline-block;
-    margin: auto 1rem;
+    margin: 0;
+    padding: 0.25rem;
+    font-size: 2rem;
+}
+
+footer ul li a.link {
+    margin: 0;
+}
+
+footer ul li a.link i {
+    font-style: normal;
 }
 
 
@@ -328,32 +428,219 @@ footer ul * {
 
 .mix,
 .gap {
-    width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+    width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+
+    .mix,
+    .gap {
+        width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+    }
+
+    div.portfolio-item {
+        height: 10rem;
+    }
+
+    footer ul li {
+        padding: 0.5rem;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 560px) {
+    div.skills {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    div.portfolio-item {
+        height: 15rem;
+    }
+
+    div#contact .container .left {
+        flex: 1;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    div#contact .container .left {
+        flex: 1;
+    }
+
+    div#contact .container .right {
+        flex: 12;
+    }
+
+    div#contact form button {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    nav#nav-desktop {
+        display: flex;
+    }
+
+    nav#nav-mobile {
+        display: none;
+    }
+
+    div#hero,
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .left {
+        flex: 1;
+    }
+
+    .right {
+        flex: auto;
+        padding-right: 1rem;
+    }
+
+    nav#nav-desktop .right,
+    nav#nav-desktop .left {
+        flex: auto;
+    }
+
+    div#hero,
+    div#hero .right {
+        text-align: left;
+    }
+
+    div#hero h1 {
+        margin-top: 0;
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    div#hero h2 {
+        font-size: 1.2rem;
+    }
+
+    div#hero h1,
+    div#hero h2 {
+        text-align: left;
+    }
+
+    img#profile-pic {
+        height: 15rem;
+        border: 15px solid white;
+    }
+
+    div#portfolio button {
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+    }
+
+    div#contact .container {
+        flex-direction: row;
+    }
+
+    div#contact .container .left {
+        flex: 3;
+    }
+
+    div#contact .container .right {
+        flex: auto;
+    }
+
+    div#contact form {
+        text-align: left;
+    }
+
+    div#contact form button {
+        margin-left: 1rem;
+    }
+
+    div#contact .container form .container {
+        flex-direction: row;
+    }
+
+    div#contact .container form .container>* {
+        padding: 1rem;
+    }
+
+    div#contact .container form .container>.right {
+        margin: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    div#contact .container form .container>.right>textarea {
+        margin: 0;
+        margin-bottom: 1rem;
+        height: 100%;
+    }
+
+    div.portfolio-item {
+        height: 20rem;
+    }
 }
 
 /* 3 Columns */
 
-@media screen and (min-width: 541px) {
+@media screen and (min-width: 900px) {
+
     .mix,
     .gap {
         width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
     }
+
+    h3.title {
+        font-size: 1.2rem;
+    }
+
+    p.skill-description {
+        font-size: 1rem;
+    }
+
+    div.portfolio-item {
+        height: 15rem;
+    }
 }
 
-/* 4 Columns */
+@media screen and (min-width: 1024px) {
+    canvas {
+        background-color: white;
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+    }
 
-@media screen and (min-width: 961px) {
+    body {
+        width: 60%;
+        margin: 2rem auto;
+    }
+
+    .mix,
+    .gap {
+        width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+    }
+
+    div.portfolio-item {
+        height: 20rem;
+        width: 20rem;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
     .mix,
     .gap {
         width: calc(100%/4 - (((4 - 1) * 1rem) / 4));
     }
-}
 
-/* 5 Columns */
+    div.portfolio-item {
+        height: 20rem;
+        width: auto;
+    }
 
-@media screen and (min-width: 1281px) {
-    .mix,
-    .gap {
-        width: calc(100%/5 - (((5 - 1) * 1rem) / 5));
+    footer ul li {
+        padding: 0.5rem 1rem;
     }
 }
