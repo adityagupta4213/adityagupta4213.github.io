@@ -1,3 +1,4 @@
+/* Portfolio gallery */
 var mixer = mixitup('#gallery', {
     controls: {
         enable: true
@@ -7,14 +8,16 @@ var mixer = mixitup('#gallery', {
     }
 });
 
+/* Enable smooth scroll on all links */
 var scroll = new SmoothScroll('a[href*="#"]');
 
+/* Smooth scroll for "contact" button @ hero element */
 var contactAnchor = document.querySelector('#contact');
-
 document.querySelector('#contact-btn').addEventListener("click", () => {
     scroll.animateScroll(contactAnchor);
 })
 
+/* Mobile nav menu */
 var isNavOpen = false;
 
 document.querySelector('#nav-btn').addEventListener("click", () => {
