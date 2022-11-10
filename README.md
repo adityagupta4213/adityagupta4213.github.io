@@ -1,1 +1,1 @@
-Repo for my portfolio website. Made from scratch, no libraries. 
+Repo for my portfolio website.
